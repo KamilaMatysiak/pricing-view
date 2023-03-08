@@ -1,0 +1,272 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  color: var(--color-primary-200);
+}
+
+/* Extra small devices (phones, 600px and down) */
+
+.pricing-header-component {
+  text-align: center;
+  max-width: 240px;
+  margin:  32px auto;
+
+  &__title {
+    margin: 8px;
+  }
+  &__subtitle {
+    color: var(--color-neutral-400);
+    margin: 16px 0;
+  }
+
+}
+
+.pricing-contener-component {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  .pricing-card {
+    border: var(--stroke);
+    border-radius: var(--rounding-24);
+    margin: 16px 24px 0px 24px;
+    aspect-ratio: 0.7135;
+    padding:  24px 32px;
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.5s;
+
+    &--dark {
+      background-color: var(--color-primary-200);
+      color: var(--color-neutral-100);
+    }
+
+    &__title {
+      margin: 8px 0;
+    }
+
+    &__price-container {
+      display: flex;
+      margin: 4px 0;
+
+      .price-container__icon {
+        align-self: flex-start;
+        width: 9px;
+        height: 16px;
+      }
+
+      .price-container__title {
+        align-self: center;
+      }
+
+      .price-container__subtitle {
+        align-self: flex-end;
+        margin: 0 0 0 2px;
+        color: var(--color-neutral-400);
+      }
+    }
+
+    &__description {
+      color: var(--color-neutral-400);
+      margin: 16px 0 0 0;
+      max-width: 250px;
+    }
+
+    &__bullet-list {
+      list-style: none;
+      padding: 0;
+      margin: 16px 0;
+    
+      .list-item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 0 8px 0;
+
+        &__icon {
+          max-width: 16px;
+          max-height: 16px;
+        }
+
+        &__text {
+          padding: 0;
+          margin: 0px 12px;
+        }
+      }
+
+    }
+  }
+}
+
+.button {
+  display: block;
+  width: 100%;
+  max-width: 260px;
+  padding: 16px 0;
+  margin: auto 0 8px 0;
+  align-self: center;
+  justify-self: center;
+
+  color: var(--color-neutral-100);
+  border-radius: var(--rounding-16);
+
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s;
+  
+
+
+  &--primary {
+    background-color: var(--color-primary-200);
+  }
+
+  &--primary:hover {
+    background-color: var(--color-primary-100);
+  }
+
+  &--primary:active {
+    background-color: var(--color-primary-300);
+  }
+
+
+  &--secondary {
+    background-color: var(--color-secondary-200);
+  }
+
+  &--secondary:hover {
+    background-color: var(--color-secondary-100);
+  }
+
+  &--secondary:active {
+    background-color: var(--color-secondary-300);
+  }
+
+}
+
+.text {
+
+  &--title {
+    font-size: 48px;
+    letter-spacing: -0.03em;
+    line-height: 100%;
+    font-weight: var(--semibold);
+  }
+
+  &--subtitle {
+    font-size: 24px;
+    letter-spacing: -0.03em;
+    line-height: 100%;
+    font-weight: var(--semibold);
+  }
+  
+  &--semibold {
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    line-height: 140%;
+    font-weight: var(--semibold);
+  }
+  
+  &--regular {
+    font-size: 16px;
+    letter-spacing: -0.01em;
+    line-height: 140%;
+    font-weight: var(--regular);
+  }
+  
+  &--small {
+    font-size: 14px;
+    letter-spacing: -0.01em;
+    line-height: 100%;
+    font-weight: var(--semibold);
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) { 
+  .pricing-header-component {
+    margin: 32px auto;
+  }
+
+  .pricing-contener-component {
+    .pricing-card {
+      width: 100%;
+      max-width: 608px;
+      aspect-ratio: 2.66;
+      position: relative;
+
+      &__price-container {
+        position: absolute;
+        top: 24px;
+        right: 32px;
+      }
+
+      &__description {
+        margin: 0;
+      }
+
+      &__bullet-list {
+        margin: 24px 0 0 0;
+      }
+      
+    }
+  }
+
+  .button {
+    position: absolute;
+    right: 32px;
+    bottom: 24px;
+  }
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up)*/
+@media (min-width: 992px) {
+  .pricing-header-component {
+    margin: 5% auto 48px auto;
+    flex-wrap: nowrap;
+  }
+
+  .pricing-contener-component {
+    flex-wrap: nowrap;
+    
+    .pricing-card {
+      margin: 0px 7px;
+      width: 33%;
+      max-width: 260px;
+      aspect-ratio: 0.76;
+
+      &__price-container {
+        position: unset;
+      }
+
+      &__description {
+        margin: 16px 0 0 0;
+      }
+
+      &__bullet-list {
+        margin: 16px 0;
+      }
+      
+    }
+  }
+
+  .button {
+    position: initial;
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    padding: 16px 0;
+    margin: auto 0 8px 0;
+    align-self: center;
+    justify-self: center;
+  }
+}
