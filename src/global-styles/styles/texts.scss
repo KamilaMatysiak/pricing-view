@@ -1,0 +1,38 @@
+//text styles according to style guide
+
+.text {
+    &--title {
+        font-size: 48px;
+        letter-spacing: -0.03em;
+        line-height: 100%;
+        font-weight: var(--semibold);
+    }
+
+    &--subtitle {
+        font-size: 24px;
+        letter-spacing: -0.03em;
+        line-height: 100%;
+        font-weight: var(--semibold);
+    }
+
+    &--semibold {
+        font-size: 16px;
+        letter-spacing: -0.01em;
+        line-height: 140%;
+        font-weight: var(--semibold);
+    }
+
+    &--regular {
+        font-size: 16px;
+        letter-spacing: -0.01em;
+        line-height: 140%;
+        font-weight: var(--regular);
+    }
+
+    &--small {
+        font-size: 14px;
+        letter-spacing: -0.01em;
+        line-height: 100%;
+        font-weight: var(--semibold);
+    }
+}
